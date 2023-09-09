@@ -1,0 +1,71 @@
+Part 1
+
+Write down what the following statements will return. Try to figure this out before putting the commands in the chrome console.
+
+1. 2 == “2”;        //true
+2. 2 === 2;         // true
+3. 10 % 3;          // 1 
+4. 10 % 3 === 1;    //true 
+5. true && false;   //false
+6. false || true;   //true
+7. true || false;   //true
+
+Part 2
+
+Answer the following questions about this code block:
+
+let isLearning = true;
+if(isLearning){
+  console.log("Keep it up!");
+} else {
+  console.log("Pretty sure you are learning....");
+}
+
+1. What should the above code console.log?
+The above will return "Keep it up!"
+
+2. Why do we not need to specify if(isLearning === true)? Why does if(isLearning) work on its own?
+  The value of firstVariable is undefined. Variables that are not assigned to any value are assigned to the value undefined, otherwise the only false value are undefined, null, NaN, 0, and an empty string.
+
+let firstVariable;
+let secondVariable = "";
+let thirdVariable = 1;
+let secretMessage = "Shh!";
+
+if(firstVariable){
+  console.log("first");
+} else if(firstVariable || secondVariable){
+  console.log("second");
+} else if(firstVariable || thirdVariable){
+  console.log("third");
+} else {
+  console.log("fourth");
+}
+
+1. What should the above code console.log? Why?
+   The above will console.log "third", because the firstVariable is undefined meaning it is false, when it goes to firstVariable or thirdVariable, it will print out third because thirdVariable is true.
+
+2. What is the value of firstVariable when it is initialized?
+    firstVariable is undefined because it was not assigned a value.
+
+3. Is the value of firstVariable a “truthy” value? Why?
+    No, since it is undefined, it is falsey.
+
+4. Is the value of secondVariable a “truthy” value? Why?
+    No, because it is an empty string making it falsey.
+
+5. Is the value of thirdVariable a “truthy” value? Why?
+    Yes, all numbers execpt for 0 is truthy.
+
+Part 3
+
+if(Math.random() > .5){
+  console.log("Over 0.5");
+} else {
+  console.log("Under 0.5");
+}
+
+
+What is a falsey value? List all the falsey values in JavaScript.
+
+A falsey value is a value that evaluates to false when inside of a conditional statement (if, else if, case). Inside of these conditional statements, the result will always be true or false regardless of what values are passed to the condition. The falsey values (values that will always be evaluated to false inside of a condition) in JavaScript are 0, “”, false, null, undefined and NaN.
